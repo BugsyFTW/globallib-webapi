@@ -1,0 +1,41 @@
+﻿-- rotas com versão
+[RoutePrefix("v1")]
+
+-- rotas especificas para controler/item/controller
+-- grupos/1/Listaitems
+[Route("nomeocontroler/{nome da variavel de id}/controller]
+
+-- usar o mesmo metodo do controller para ser invocado de 2 formas diferentes
+
+[Route("controllerList/{itemID}/controller/{id}")]
+[Route("controller/{id}")]
+Get(int id, int? itemID = null)
+
+-- sorting
+-- usar querystring 
+
+-- filter
+-- usar querystring
+
+--paging
+-- uri para pagina anterior e seguinte
+-- total registos e total paginas
+-- nr de pagina e registos por pagina (opção)
+
+-- adicionar esta informação no header
+
+-- numero pagina e tamanho pagina na querystring 
+
+var paginationHeader = new {
+	currentPage
+	pageSize
+	totalCount
+	totalPages
+	previousPageLink
+	nextPageLink
+}
+
+HttpContext.Curent.Response.
+
+-- datashapping
+
